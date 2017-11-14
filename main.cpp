@@ -27,11 +27,9 @@ vector<string> askFileName();
 //Recieves the vector, then checks if at least two images provied have the same dimensions, and returns an error message
 int errorAtLeast ( vector <string> & files);
 
-//Recieves a 3d vector of images and its pixels, averages the rgb of all the images, returns a 2d vector of all of the images put together
+//Recieves a 3d vector of images and its pixels, averages the rgb of all the images, returns and saves 2d vector of all of the images put together
 vector < vector<Pixel> > combineImage (vector <string> & files);
 
-//Recieves the combined image, then saves it as combined image
-void saveToUsername(vector <vector <Pixel> > finalImage);
 
 int main() 
 {
@@ -159,8 +157,4 @@ vector<vector<Pixel> > combineImage (vector <string> & files)
     cout<<"Your composite image was saved!"<<endl;
        
     return finalImage;
-}
-
-void saveToUsername (vector <vector <Pixel> > finalImage)
-{
 }
